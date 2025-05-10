@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Merri';
+    src: url(fonts/merriweather.ttf) format('truetype');
+}
+
+/*@keyframes bg{
+    from{background-color: blueviolet;}
+    to{background-color: blue;}
+}
+
+div{
+    width: 100px;
+    height: 100px; 
+    background-color: blueviolet;
+    animation-name: bg;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+    */
+
+
+body{
+    font-family: 'Merri';
+    animation: bg 10s infinite alternate; 
+    animation-timing-function: ease-in-out;
+}
+
+
+h1{
+    color: white; 
+    text-align: center;
+}
+
+img{
+    width: 150px;
+    border-style: solid;
+
+}
+img.hover{
+    color: gray; 
+}
+
+img.circle{
+    position: absolute; 
+    top: 
+}
+
+/*img.topRight{
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    width: 150px; 
+    height: 150px; 
+}*/
+
+li{
+    float: left; 
+}
+
+li a{
+    display: block; 
+    color: white; 
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration: none;
+}
+
+li a:hover{
+    color: darkgray; 
+}
+
+.active{
+    background-color: lightgray; 
+    color: black; 
+}
+
+a{
+    padding: 12px; 
+    /*background-color:; */
+}
+
+ul{
+   background-color: darkslategray;
+   margin: 0; 
+   overflow: hidden; 
+   list-style-type: none;
+
+}
+
+
+/* Columns - setting up set up */
+
+.column{
+    float: left; 
+    width: 33.3%; 
+}
+
+.row:after{
+    content: ""; 
+    display: table; 
+    clear: both; 
+}
+
+@media screen and (max-width: 600px)
+{
+    .column{
+        width: 50%; 
+    }
+}
