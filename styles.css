@@ -132,3 +132,8 @@ ul {
 .column:nth-child(2) {
     margin-left: -10px; /* adjust until it feels right */
   }
+
+
+.message{
+    padding: 50px 50px; 
+}
