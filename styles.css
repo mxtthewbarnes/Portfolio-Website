@@ -80,7 +80,10 @@ a{
 }
 .column{
     flex: 1; 
-    min-width: 250;
+    max-width: 600px;
+    margin: 0 auto; 
+    gap: 1rem;
+    padding: 0 20px;
 }
 
 
@@ -103,6 +106,10 @@ ul {
   }
 
 
+
+
+
+
   /* logo placement */
   .logo-bar{
     background-color: darkslategray;
@@ -113,13 +120,20 @@ ul {
     width: 110px;
     height: auto; 
     display: inline-block; 
+    transition: transofmr 0.2s ease-in-out;
      
 }
+.logo-img:hover{
+    transform: scale(1.10); 
+    cursor:pointer;
+}
+
+
 
 
 /* Portrait image */
 .portrait-img{
-    border-radius: 16px;
+    border-radius: 20px;
     margin: 20px 20px 20px 45px;
     transition: transform 0.2s ease-in-out; 
     
@@ -130,7 +144,7 @@ ul {
 }
 
 .column:nth-child(2) {
-    margin-left: -10px; /* adjust until it feels right */
+    margin-left: -160px; /* adjust until it feels right */
   }
 
 
