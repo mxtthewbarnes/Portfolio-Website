@@ -46,13 +46,15 @@ img.hover{
 }
 
 nav ul {
-    margin: 0;
-    padding-left: 45px;
-    overflow: hidden;
-    list-style-type: none;
+    font-size: 18px;
     display: flex;
-    gap: 10px;
-  }
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    padding: 0 45px;
+    margin: 0;
+}
   
   /* Style the link like a button */
   nav li a {
@@ -70,6 +72,24 @@ nav ul {
     position: relative;
   }
   
+
+  @keyframes bounceColor{
+    0%{
+        color: white; 
+    }
+    18%{
+        color: orange;
+    }
+    30%{
+        color: orangered;
+    }
+    100%{
+        color: orange;
+    }
+  }
+
+
+
   /* Animate the span inside the link */
   nav li a span {
     position: relative;
@@ -87,6 +107,7 @@ nav ul {
   
   nav li a:hover span {
     padding-right: 20px;
+    animation: bounceColor 0.7s ease-in-out forwards;
   }
   
   nav li a:hover span:after {
@@ -160,6 +181,8 @@ ul {
 
 
   /* logo placement */
+ 
+  
   .logo-bar{
     background-color: darkslategray;
     padding: 10px 45px; 
@@ -169,12 +192,27 @@ ul {
     width: 110px;
     height: auto; 
     display: inline-block; 
-    transition: transofmr 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
      
 }
 .logo-img:hover{
-    transform: scale(1.10); 
-    cursor:pointer;
+
+    transform: scale(1.15); 
+    cursor: pointer;
+}
+
+
+/* Header section above portrait "ABOUT ME: " */
+.section-title{
+    color: darkslategray;
+    text-align: Center;
+    font-size: 36px;
+    margin-top: 45px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.section-title:hover{
+    transform: scale(1.05);
 }
 
 
@@ -193,10 +231,62 @@ ul {
 }
 
 .column:nth-child(2) {
+    flex: 2; 
     margin-left: -160px; /* adjust until it feels right */
   }
 
 
 .message{
     padding: 50px 50px; 
+}
+
+
+
+/* Sending "top button" to right-most side of the NAV bar */
+
+/* Jumping animation first */
+@keyframes bounce{
+    0%, 100%{
+        transform: translateY(0);
+        color: white;
+    }
+    18%{
+        transform: translateY(-19px);
+        color: orangered;
+    }
+    30%{
+        transform: translateY(-0px);
+        color: orange;
+    }
+    50%{
+        transform: translatey(0);
+        color: orange;
+
+    }
+}
+
+
+#myBtn{
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: darkslategray;
+    font-family: '';
+    padding-right: 20px;
+    margin-left: auto;
+    cursor: pointer; 
+    display: inline-block
+
+}
+
+#myBtn:hover{
+    animation: bounce 3s ease-in-out forwards;
+    transition: background 0.3s; 
+    
+}
+
+.top-button{
+    font-size: 16px;
+    margin-left: auto;
 }
