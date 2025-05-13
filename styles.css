@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'pacific';
+    src: url(fonts/pacifico.ttf) format(truetype);
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -202,7 +208,7 @@ ul {
 
 /* Header section above portrait "ABOUT ME: " */
 .section-title{
-    color: darkslategray;
+    color: white;
     text-align: Center;
     font-size: 36px;
     margin-top: 45px;
@@ -268,14 +274,16 @@ ul {
 
 
 #myBtn{
+    
+    position: fixed;
     font-size: 18px;
     border-radius: 15px;
     border: none;
     color: white;
     background-color: darkslategray;
-    font-family: '';
-    padding-right: 20px;
-    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: -45px;
     cursor: pointer; 
     display: inline-block
 
@@ -295,12 +303,140 @@ ul {
 
 /* Languages photo editing */
 .languages{
+    margin-top: 20px;
+    padding-top: 20px;
     display: flex;
-    justify-content: center;
-    gap:15px;
-    width: 0px;
+    justify-content: flex-start;
+    gap:10px;
 }
 
 .languages i{
     font-size: 48px;
+    display: inline-block;
 }
+
+
+
+   .highlight{
+    font-family: 'pacific';
+    font-size: 50px;
+    margin-bottom: 20px;
+    color:darkslategray;
+   }
+
+   .highlight:hover{
+    animation: bounceColor 0.5s ease-in-out forwards;
+   }
+
+
+   /* From 'About me' to 'Projects' */
+   .about-section {
+    min-height: 80vh;
+    background-color: white; /* add this if not set elsewhere */
+}
+
+
+
+
+.wave-transition {
+    line-height: 0; /* Remove spacing below inline SVG */
+    margin: 0;
+    padding: 0;
+    display: block;
+    background: none;
+  }
+  
+  .wave-transition svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .projects-section {
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-title {
+    margin-top: 0;
+  }
+
+
+   /* Flick finder video stuff... */
+   .background-video{
+    border-style: solid;
+    border-color: white;
+    border-radius: 20px;
+    width: 100%;
+    margin-left: -20px;
+   }
+
+
+   .highlight2{
+    color: white;
+    font-family: 'pacific';
+    font-size: 40px;
+   }
+
+   .projects-section{
+    background-color: darkslategrey;
+    padding: 0;
+    margin: 0;
+   }
+
+
+   .project-body{
+    color: white;
+    margin-left: 30px;
+   }
+
+   .flick-stack {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+
+
+/* Mobile stuff */
+@media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .column {
+      margin: 0;
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .portrait-img {
+      margin: 0 auto;
+      display: block;
+      width: 80%; /* or adjust as needed */
+    }
+  
+    .languages,
+    .flick-stack {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    #myBtn {
+      right: 10px;
+      bottom: 10px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav li {
+      margin-bottom: 10px;
+    }
+  }
