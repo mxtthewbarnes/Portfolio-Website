@@ -181,9 +181,7 @@ ul {
 
 
   /* logo placement */
- 
-  
-  .logo-bar{
+.logo-bar{
     background-color: darkslategray;
     padding: 10px 45px; 
     text-align: left; 
@@ -220,14 +218,17 @@ ul {
 
 /* Portrait image */
 .portrait-img{
-    border-radius: 20px;
+    border-radius: 60%;
+    border-style: solid;
+    border-color: darkslategray;
     margin: 20px 20px 20px 45px;
-    transition: transform 0.2s ease-in-out; 
+    transition: transform 0.4s ease-out; 
     
 }
 .portrait-img:hover{
-    transform: scale(1.02); 
+    transform: scale(1.09); 
     cursor: pointer; 
+    border-color:  orange;
 }
 
 .column:nth-child(2) {
@@ -289,4 +290,17 @@ ul {
 .top-button{
     font-size: 16px;
     margin-left: auto;
+}
+
+
+/* Languages photo editing */
+.languages{
+    display: flex;
+    justify-content: center;
+    gap:15px;
+    width: 0px;
+}
+
+.languages i{
+    font-size: 48px;
 }
