@@ -457,3 +457,16 @@ ul {
       padding-left: 10px;
     }
   }
+
+
+  /* Fixing vertical menu bar issue on mobile view */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    nav li {
+      margin-bottom: 0;
+    }
+  }
