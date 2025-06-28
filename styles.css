@@ -76,6 +76,7 @@ nav ul {
     text-decoration: none;
     display: inline-block;
     position: relative;
+    
   }
   
 
@@ -237,10 +238,12 @@ ul {
     border-color:  orange;
 }
 
-.column:nth-child(2) {
-    flex: 2; 
-    margin-left: -160px; /* adjust until it feels right */
+@media (min-width: 769px) {
+  .column:nth-child(2) {
+    flex: 2;
+    margin-left: -160px;
   }
+}
 
 
 .message{
@@ -290,7 +293,7 @@ ul {
 }
 
 #myBtn:hover{
-    animation: bounce 3s ease-in-out forwards;
+    animation: bounce 3s ease-in-out infinite;
     transition: background 0.3s; 
     
 }
